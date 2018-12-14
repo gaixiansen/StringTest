@@ -1,0 +1,28 @@
+jdk-8u191-windows-x64.exe
+    JDK: 开发套件(javac/java/jps/jstat + dev lib)
+    JRE: 运行环境(rt lib)
+
+MAVEN: 项目管理工具
+    Repo 仓库(公共/私有)
+    下载依赖的jar文件到本地的缓存.(.m2/repositories)
+    编译源码+打包
+    项目标准结构
+    https://mvnrepository.com
+    解压并配置环境变量 M2_HOME 并把 bin 目录加入PATH
+    C:\Program Files\Java\apache-maven-3.6.0\conf\settings.xml
+        <localRepository>${user.home}/.m2/repository</localRepository>
+        C:\Users\Administrator\.m2\repository
+
+IDEA:
+
+
+MAVEN 工程
+    1. maven 功能目录结构, 知道在哪里写代码
+    2. 编码代码 + 打包代码(不带依赖/带依赖)
+    $ mvn clean package
+        learning-java-by-maven-1.0.jar -> learning-java-by-maven-1.0.zip
+    3. 运行程序(-cp == classpath)
+    $ java -cp .\target\learning-java-by-maven-1.0.jar com.github.gsx.Application (不带依赖)
+    $ java -jar .\target\learning-java-by-maven-1.0-jar-with-dependencies.jar (带依赖)
+
+Spring Boot 项目
